@@ -1,0 +1,64 @@
+#This is a log of what was done in this project
+1. Clean the data using Python (Jupyter Notebooks):
+	1.1 import data from CSV into my notebook and put data into a data 	frame using pandas
+	1.2 drop rows with missing values
+	1.3 remove duplicate rows
+	1.4 Convert columns to appropriate data types
+		1.4.1 Convert CustomerID to numeric int instead of float
+		1.4.2 Convert UnitPrice to numeric
+		1.4.3 Convert Quantity to numeric
+		1.4.4 Convert InvoiceDate to datetime
+	1.5 Make sure every number Quantity column is a positive integer and 	delete any wrong values
+	1.6 Replace commas with underscores in the Description column as they 	were interfering with the structure of the csv file
+	1.6 Create a new column Total as the sum of Quantity and UnitPrice
+	1.7 Reset the index of the DataFrame
+	1.8 Save the cleaned DataFrame to a new CSV file 	online_retail_df_cleaned.csv
+
+2. Explore and analyze data using SQL (SQL Server Management Studio 19):
+	2.1 Create a new database
+	2.2 Create a new table
+	2.3 Fill the table with data from cleaned csv
+	2.4 Do some select queries to explore data
+		2.4.1 Select Expensive items (over 100) and order by price
+		2.4.2 Select Large orders (over 1000 in total) and order by 		total
+		2.4.3 Select orders in Portugal during July
+		2.4.4 Select orders that have Glass and silver in the 			description
+		2.4.5 Select the 10 most paying customers and their countries
+		2.4.6 select average sales every month
+3. Analyze data using Excel:
+	3.1 Export data from CSV file to Excel
+	3.2 Create a new sheet to put statistics in
+		3.2.1 Calculate Mean, Median, and Mode for Quantity, 			price, and total
+		3.2.2 Calculate Standard Deviation for Population and 			Population Variance for Quantity, price, and total
+		3.2.3 Calculate Min and Max for Quantity, price, and 			total
+	3.3 Create Pivot Tables
+		3.3.1 Create a pivot table to count the occurrences 			of each Customer ID
+		3.3.2 Create a pivot table to count the occurrences 			of each Country
+		3.3.3 Create a pivot table to count the occurrences 			of each Product
+	3.4 Apply Regression Analysis to Unit price and total
+	3.5 Create a pivot table to group invoice dates by month and 		create a line visualization to show total sales per month
+4. Create Visualizations using Power BI:
+	4.1 Create a Map Visualization for Total Sales by Country
+	4.2 Create a bar chart for most selling products by Quantity
+	4.3 Create a line chart for total sales by month and year
+	4.4 Create a bar chart for most selling products by Total sales
+	4.5 Create Measures:
+		4.5.1 Create a measure to calculate the highest sales country
+		4.5.2 Create a measure to calculate the total value of sales 		in the dataset
+		4.5.3 Create a measure to calculate the number of unique 		customers
+		4.5.4 Create a measure to calculate the number of total 		orders
+		4.5.5 Create a measure to calculate the Average order value
+		4.5.6 Create a measure to calculate the total quantity sold
+
+	4.6 Create a dashboard:
+		4.6.1 add some of the visualizations:
+			4.6.1.1 Map Visualization for Total Sales by Country
+			4.6.1.2 Bar chart for most selling products by 				Quantity
+			4.6.1.3 Line chart for total sales by month and year
+		4.6.2 add some of the measures as cards:
+			4.6.2.1 The Highest Sales Country
+			4.6.2.2 The total value of sales
+			4.6.2.3 The number of unique customers
+			4.6.2.4 The number of total orders
+			4.6.2.5 The Average Order Value
+			4.6.2.6 the total quantity sold
